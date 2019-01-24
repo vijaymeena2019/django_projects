@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student information</title>
+</head>
+<body>
+	<h1>Student infomation</h1>
+	{%if students%}
+	<table border='2'>
+		<thead>
+			<th>Student Roll No.</th>
+			<th>Student Name</th>
+			<th>Student City</th>
+			<th>Student Fees</th>
+		</thead>
+		<tbody>
+			{%for stu in students%}
+			<tr>
+				<td>{{stu.stu_roll}}</td>
+				<td>{{stu.stu_name}}</td>
+				<td>{{stu.stu_city}}</td>
+				<td>{{stu.stu_fees}}</td>
+			</tr>
+			{%endfor%}
+		</tbody>
+	</table>
+	{%else%}
+		<p>No data found</p>
+	{%endif%}
+</body>
+</html>
+
